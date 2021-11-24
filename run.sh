@@ -1,6 +1,7 @@
 #!/bin/sh
-
-dataset=fixmypose
+# modifying this file inorder to train it on kaggle
+# change dataset=fixmypose
+dataset=../../input/fixpose/fixmypose
 
 # Main metric to use
 metric=CIDEr
