@@ -1,8 +1,8 @@
 #!/bin/sh
 # modifying this file inorder to train it on kaggle
 # change dataset=fixmypose
-dataset=../../input/fixpose/fixmypose
-
+dataset=fixmypose
+datasetPath=../../input/fixpose/fixmypose
 # Main metric to use
 metric=CIDEr
 
@@ -24,7 +24,7 @@ cp $0 snap/$log_dir/run.bash
 cp -r src snap/$log_dir/src
 
 CUDA_VISIBLE_DEVICES=$gpu stdbuf -i0 -o0 -e0 python src/main.py --output snap/$log_dir \
-    --maxInput 40 --metric $metric  --worker 4 --train speaker --dataset $dataset \
+    --maxInput 40 --metric $metric  --worker 4 --train speaker --dataset $datasetPath \
     --batchSize 45 --hidDim 512 --dropout 0.5 \
     --seed 9595 \
     --optim adam --lr 1e-4 --epochs 500 \
