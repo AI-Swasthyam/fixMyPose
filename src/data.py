@@ -12,7 +12,7 @@ import os
 import numpy as np
 import torch
 
-DATA_ROOT = "dataset/"
+DATA_ROOT = ""
 
 def pil_loader(path):
     with open(path, 'rb') as f:
